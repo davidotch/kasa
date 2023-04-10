@@ -1,0 +1,20 @@
+@import "../../sass/main.scss";
+
+.header {
+    @include flex(row, space-between, center);
+    height: 68px;
+    max-width: 95%;
+    margin: 0 auto;
+    &_logo {
+        height: 60%;
+    }
+    &_link {
+        display: flex;
+        gap: 50px;
+        font-size: 24px;
+            &_active {
+                color: $color-secondary;
+        }
+    }
+    
+}
