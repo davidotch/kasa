@@ -12,7 +12,11 @@
         display: flex;
         gap: 50px;
         font-size: 24px;
+        color: $color-secondary;
             &_active {
+                position: relative;
+                color: $color-secondary;
+                text-decoration: underline solid;
                 color: $color-secondary;
         }
     }
