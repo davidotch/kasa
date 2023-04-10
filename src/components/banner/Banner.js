@@ -1,21 +1,14 @@
-import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import React from "react";
+// import "../style/banner.css";
 
-export default function Banner() {
-
-    let [bannerPage, setBannerPage] = useState(false);
-    let location = useLocation();
-    
-    useEffect(() => {
-        if(location.pathname === '/about'){
-            setBannerPage(true)
-        };
-        // eslint-disable-next-line
-    }, [])
-
-    return (
-        <section className={bannerPage ? 'banner_about' : 'banner'}>
-            {!bannerPage && <p>Chez vous, partout et ailleurs</p>}
-        </section>
-    )
+export function Banner() {
+  return (
+    <div className="banner">
+      <img
+        src={require("../../assets/headerImg.png")}
+        alt="paysage mêlant mer et montagne"
+      />
+      <h1>Chez vous, partout et ailleurs</h1>
+    </div>
+  );
 }
