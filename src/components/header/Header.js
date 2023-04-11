@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import './Header.scss';
 
-export function Header() {
+export default function Header() {
   return (
     <header className="header">
         <img className="header_logo"
