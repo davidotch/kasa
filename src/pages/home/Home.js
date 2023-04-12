@@ -1,3 +1,4 @@
+import './Home.scss';
 import Header from '../../components/header/Header';
 import Banner from "../../components/banner/Banner";
 import Gallery from "../../components/gallery/Gallery";
