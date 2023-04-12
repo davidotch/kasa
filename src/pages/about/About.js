@@ -6,13 +6,15 @@ import Footer from '../../components/footer/Footer';
 
 export default function About() {
     return (
-        <div>
+        <div className='about'>
             <Header />
             <Banner />
-            <Collapse title="Fiabilité" description={about.fiabilite} />
-            <Collapse title="Respect" description={about.respect} />
-            <Collapse title="Service" description={about.service} />
-            <Collapse title="Sécurité" description={about.securite} />
+            <div className='about_collapse'>
+                <Collapse title="Fiabilité" description={about.fiabilite} />
+                <Collapse title="Respect" description={about.respect} />
+                <Collapse title="Service" description={about.service} />
+                <Collapse title="Sécurité" description={about.securite} />
+            </div>
             <Footer />
         </div>
     )
