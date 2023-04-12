@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import arrow from '../../assets/arrow.png';
+import './Collapse.scss';
 
 export default function Collapse({ title, description }) {
   const [open, setOpen] = useState(false);
