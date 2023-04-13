@@ -1,44 +1,47 @@
-import ArrowBack from '../../assets/carousel_arrow_back.png'
-import ArrowForward from '../../assets/carousel_arrow_forward.png'
-import { useState } from 'react'
+import { useState } from 'react';
+import arrowBack from '../../assets/carousel_arrow_back.png';
+import arrowForward from '../../assets/carousel_arrow_forward.png';
 
-export default function Carousel({imgSlider}) {
+export default function Carousel({ imageSlider }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
 
-    const [currentIndex, setCurrentIndex] = useState(0)
-
-    const nextImg = () => {
-        setCurrentIndex(currentIndex + 1)
-        if(currentIndex === imgSlider.length -1)
-            setCurrentIndex(0)
+  const nextImg = () => {
+    if (currentIndex === imageSlider.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
     }
+  };
 
-    const previousImg = () => {
-        setCurrentIndex(currentIndex - 1)
-        if(currentIndex === 0)
-            setCurrentIndex(imgSlider.length -1)
+  const previousImg = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(imageSlider.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
     }
+  };
 
-    return (
-        <div style={{backgroundImage : `url(${imgSlider[currentIndex]})`}} className='carousel'>
-            {imgSlider.length > 1 &&
-                <>
-                    <img
-                        className='carousel_arrow carousel_arrow_back'
-                        src={ArrowBack}
-                        alt='Show next img'
-                        onClick={nextImg}
-                    />
-                    <img
-                        className='carousel_arrow carousel_arrow_forward'
-                        src={ArrowForward}
-                        alt='Show previous img'
-                        onclick={previousImg}
-                    />
-                    <p className='slideCount'>
-                        {currentIndex + 1} / {imgSlider.length}
-                    </p>
-                </>
-            }
-        </div>
-    )
+  return (
+    <div className="carousel" style={{backgroundImage: `url(${imageSlider[currentIndex]})`}}>
+      {imageSlider.length > 1 && (
+        <>
+          <img
+            className="carousel_arrow carousel_arrow_back"
+            src={arrowBack}
+            alt="Show previous img"
+            onClick={previousImg}
+          />
+          <img
+            className="carousel_arrow carousel_arrow_forward"
+            src={arrowForward}
+            alt="Show next img"
+            onClick={nextImg}
+          />
+          <p className="slideCount">
+            {currentIndex + 1}/{imageSlider.length}
+          </p>
+        </>
+      )}
+    </div>
+  );
 }
