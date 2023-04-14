@@ -5,8 +5,14 @@
     height: 68px;
     max-width: 95%;
     margin: 0 auto;
+    @media screen and (max-width: 768px) {
+        height: 47px;
+    }
     &_logo {
-        height: 62%;
+        height: 68%;
+    @media screen and (max-width: 768px)  {
+        height: 47px;
+    }
     }
     &_link {
         display: flex;
@@ -14,6 +20,10 @@
         font-size: 24px;
         font-style: normal;
         color: $color-secondary;
+        @media screen and (max-width: 768px) {
+            gap: 20px;
+            font-size: 12px;
+        }
             &_active {
                 position: relative;
                 text-decoration: underline solid;
