@@ -8,6 +8,15 @@
     cursor: pointer;
     overflow: hidden;
     transition : box-shadow 0.2s ease-in-out;
+    @media screen and (max-width: 1157px) {
+        width: 47%;
+    }
+    @media screen and (max-width: 982px) {
+        width: 100%;
+    }
+    @media screen and (max-width: 500px) {
+        height: 255px;
+    }
     &::after{
         content: '';
         z-index: 10;
