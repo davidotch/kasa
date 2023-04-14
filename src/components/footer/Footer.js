@@ -2,7 +2,7 @@ import './Footer.scss'
 
 export default function Footer() {
     return (
-        <div className="footer">
+    <div className="footer">
       <div className="footer_Logo">
         <img
           src={require("../../assets/logoBlk.png")}
