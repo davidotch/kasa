@@ -9,13 +9,19 @@ import greyStar from "../../assets/grey_star.png";
 import redStar from "../../assets/red_star.png";
 
 export default function Accommodation() {
+
+  // On utilise useState pour stocker les données à partir du fichier data.json.
   const [currentAccommodation, setCurrentAccommodation] = useState({});
   const [imageSlider, setImageSlider] = useState([]);
 
+
+  // On récupère l'ID à partir de l'URL.
   const { id: idAccommodation } = useParams();
 
+  //  On utilise useEffect pour récupérer des données de data.json en utilisant la méthode fetch qui effectue une requête HTTP.
   useEffect(() => {
 
+    // La fonction getData est une fonction asynchrone qui utilise await pour attendre la réponse de la requête avant de continuer.
     const getData = async () => {
         await fetch("/data.json")
       .then((response) => response.json())
@@ -29,6 +35,8 @@ export default function Accommodation() {
     getData();
   }, [idAccommodation]);
 
+  // On extrait les variables du state local pour name, rating, description et equipments.
+  // On extrait le nom et l'hôte et on le transforme en tableau a l'aide de méthode .split().
   const name = currentAccommodation.host?.name?.split(" ");
   const rating = currentAccommodation?.rating;
   const description = currentAccommodation?.description;
