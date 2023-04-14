@@ -1,4 +1,4 @@
-// import './Accomodation.scss'
+import './Accomodation.scss';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../../components/header/Header";
@@ -28,15 +28,15 @@ export default function Accommodation() {
   const name = currentAccommodation.host?.name?.split(" ");
   const rating = currentAccommodation?.rating;
   const description = currentAccommodation?.description;
-  const equipments = Object.keys(currentAccommodation?.equipments || []);
+  const equipments = Object.values(currentAccommodation?.equipments || []);
 
   return (
     <>
       <Header />
       <Carousel imageSlider={imageSlider} />
-      <main className="accommodation">
-        <div className="accommodation-content">
-          <div className="accommodation-content-infos">
+      <main className="accomodation">
+        <div className="accomodation_content">
+          <div className="accomodation_content_infos">
             <h1>{currentAccommodation.title}</h1>
             <p>{currentAccommodation.location}</p>
             <div>
@@ -45,18 +45,18 @@ export default function Accommodation() {
               ))}
             </div>
           </div>
-          <div className="accommodation-content-host">
+          <div className="accomodation_content_host">
             <div>
-              <div className="accommodation-content-host-name">
+              <div className="accomodation_content_host_name">
                 <span>{name?.[0]}</span>
                 <span>{name?.[1]}</span>
               </div>
               <img
                 src={currentAccommodation.host?.picture}
-                alt="host of this accommodation"
+                alt="host of this accomodation"
               />
             </div>
-            <div className="accommodation-content-host-stars">
+            <div className="accomodation_content_host_stars">
               {[...Array(5)].map((_, index) => (
                 <img
                   key={index}
@@ -67,12 +67,12 @@ export default function Accommodation() {
             </div>
           </div>
         </div>
-        <div className="accommodation-collapse">
-          <div className="accommodation-collapse-item">
-            <Collapse title={"Description"} content={description} />
+        <div className="accomodation_collapse">
+          <div className="accomodation_collapse_item">
+            <Collapse title={"Description"} description={description} />
           </div>
-          <div className="accommodation-collapse-item">
-            <Collapse title={"Équipements"} content={equipments} />
+          <div className="accomodation_collapse_item">
+            <Collapse title={"Équipements"} description={equipments} />
           </div>
         </div>
       </main>
