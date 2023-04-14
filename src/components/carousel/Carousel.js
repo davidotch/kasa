@@ -1,3 +1,4 @@
+import './Carousel.scss';
 import { useState } from 'react';
 import arrowBack from '../../assets/carousel_arrow_back.png';
 import arrowForward from '../../assets/carousel_arrow_forward.png';
