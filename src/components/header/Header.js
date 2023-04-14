@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import './Header.scss';
 
+// Lecomposant 'Header' retourne un code HTML qui contient un en-tête qui a un logo et deux liens de navigation créés avec "NavLink".
+// Les liens de navigation permettent à l'utilisateur de naviguer vers différentes pages du site.
 export default function Header() {
   return (
     <header className="header">
