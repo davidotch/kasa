@@ -15,7 +15,9 @@ export default function Accommodation() {
   const { id: idAccommodation } = useParams();
 
   useEffect(() => {
-    fetch("/data.json")
+
+    const getData = async () => {
+        await fetch("/data.json")
       .then((response) => response.json())
       .then((data) => {
         const accommodation = data.find((item) => item.id === idAccommodation);
@@ -23,6 +25,8 @@ export default function Accommodation() {
         setImageSlider(accommodation.pictures);
       })
       .catch((error) => console.error(error));
+    }
+    getData();
   }, [idAccommodation]);
 
   const name = currentAccommodation.host?.name?.split(" ");
