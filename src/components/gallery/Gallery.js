@@ -1,15 +1,17 @@
-import Card from '../card/Card'
-import './Gallery.scss'
+import Card from '../card/Card';
+import './Gallery.scss';
 import { useEffect, useState } from 'react';
 
 export default function Gallery() {
 
     const [ data, setData ] = useState();
 
+    //  On utilise useEffect pour récupérer des données de data.json en utilisant la méthode fetch qui effectue une requête HTTP.
     useEffect(() => {
 
+        // La fonction getData est une fonction asynchrone qui utilise await pour attendre la réponse de la requête avant de continuer.
         const getData = async () => {
-            fetch('../data.json')
+            await fetch('../data.json')
             .then((res) => {
                 if (!res.ok) {
                     throw Error("Sorry an error occured...");
@@ -30,6 +32,8 @@ export default function Gallery() {
 
     return (
         <main className='home_accomodation'>
+
+            {/* la méthode .map() prend chaque élément de data et renvoie <Card> pour chacun d'entre eux. */}
             {data && data.map(data => {
                 return (
                     <Card
@@ -41,5 +45,5 @@ export default function Gallery() {
                 )
             })}
         </main>
-    )
+    );
 }
