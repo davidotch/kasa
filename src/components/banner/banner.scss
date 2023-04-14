@@ -11,6 +11,10 @@
     padding: 20px;
     max-width: 95%;
     margin: 43px auto;
+    @media screen and (max-width: 768px) {
+        margin: 20px auto;
+        height: 111px;
+    }
     &_about{
         position: relative;
         @include flex;
@@ -21,6 +25,10 @@
         background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/gustavoAlvesUnsplash1.png');
         background-position: center;
         background-size: cover;
+        @media screen and (max-width: 768px) {
+        margin: 20px auto;
+        height: 111px;
+    }
     }
     p{
         color: $color-primary;
