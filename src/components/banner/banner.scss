@@ -4,34 +4,34 @@
     position: relative;
     @include flex;
     border-radius: 25px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/headerImg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     background-position: center;
     background-size: cover;
     height: 223px;
-    padding: 30px;
     max-width: 95%;
     margin: 30px auto;
     @media screen and (max-width: 550px) {
-        margin: 20px auto;
+        margin: 0 auto;
         height: 111px;
         border-radius: 10px;
     }
-    &_about{
+    &_img{
         position: relative;
         @include flex;
         border-radius: 25px;
         height: 223px;
-        max-width: 95%;
-        margin: 30px auto;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../assets/gustavoAlvesUnsplash1.png');
+        max-width: 100%;
+        margin: 0 auto;
+        mix-blend-mode: darken;
         background-position: center;
         background-size: cover;
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 500px) {
         margin: 20px auto;
         border-radius: 10px;
     }
     }
-    p{
+    &_title{
+        position: absolute;
         color: $color-primary;
         font-size: clamp(20px, 4vw, 48px);
         font-weight: 500;
