@@ -13,10 +13,7 @@ export default function PageNotFound() {
                 <Link className='PageNotFound_description_home' to='/'>
                     Retourner sur la page d'accueil
                 </Link>
-<<<<<<< HEAD
             <Footer/>
-=======
->>>>>>> parent of 93e357e (import Footer)
         </div>
     )
 } 
