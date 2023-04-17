@@ -1,6 +1,6 @@
 import './Footer.scss'
 
-export default function Footer() {
+export function Footer() {
     return (
     <div className="footer">
       <div className="footer_Logo">

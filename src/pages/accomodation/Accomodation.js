@@ -1,9 +1,9 @@
 import './Accomodation.scss';
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../../components/header/Header";
+// import Header from "../../components/header/Header";
 import Carousel from "../../components/carousel/Carousel";
-import Footer from "../../components/footer/Footer";
+// import Footer from "../../components/footer/Footer";
 import Collapse from "../../components/collapse/Collapse";
 import greyStar from "../../assets/grey_star.png";
 import redStar from "../../assets/red_star.png";
@@ -44,7 +44,7 @@ export default function Accommodation() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Carousel imageSlider={imageSlider} />
       <main className="accomodation">
         <div className="accomodation_content">
@@ -88,7 +88,7 @@ export default function Accommodation() {
           </div>
         </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
