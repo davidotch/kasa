@@ -11,7 +11,7 @@
         &_title {
             font-weight: 700;
             font-size: 288px;
-            @media screen and (max-height: 500px) {
+            @media screen and (max-width: 500px) {
                 font-size: 140px;               
             }
         }
