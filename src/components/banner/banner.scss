@@ -18,13 +18,11 @@
     }
     &_img{
         position: relative;
-        @include flex;
         border-radius: 25px;
         height: 223px;
         max-width: 100%;
         margin: 0 auto;
         mix-blend-mode: darken;
-        background-position: center;
         background-size: cover;
         @media screen and (max-width: 500px) {
         margin: 20px auto;
