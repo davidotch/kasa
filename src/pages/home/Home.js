@@ -1,17 +1,14 @@
 import './Home.scss';
-// import Header from '../../components/header/Header';
 import Banner from "../../components/banner/Banner";
 import Gallery from "../../components/gallery/Gallery";
-// import Footer from "../../components/footer/Footer";
+import bannerHome from '../../assets/headerImg.png';
 
 export default function Home() {
 	return (
 		
 		<div className="Home">
-			{/* <Header /> */}
-			<Banner />
+			<Banner picture={bannerHome} text={'Chez vous, partout et ailleurs'} />
 			<Gallery />
-			{/* <Footer /> */}
 		</div>
 	);
 }
