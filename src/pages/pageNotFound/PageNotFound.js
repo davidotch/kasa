@@ -14,7 +14,7 @@ export default function PageNotFound() {
                 <Link className='PageNotFound_description_home' to='/'>
                     Retourner sur la page d'accueil
                 </Link>
-                <Footer/>
+            <Footer/>
         </div>
     )
 } 
