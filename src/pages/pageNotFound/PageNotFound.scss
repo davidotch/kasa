@@ -11,17 +11,20 @@
         &_title {
             font-weight: 700;
             font-size: 288px;
+            @media screen and (max-height: 500px) {
+                font-size: 140px;               
+            }
         }
     }
-    &_text {
-        font-weight: 500;
-        font-size: clamp(20px, 4VW, 36px);
-        text-align: center;
-    }
-    &_home {
-        display: block;
-        text-align: center;
-        font-weight: 500;
-        font-size: clamp(12px, 2.5vw, 18px);
-    }
+        &_text {
+            font-weight: 500;
+            font-size: clamp(20px, 4VW, 36px);
+            text-align: center;
+        }
+        &_home {
+            display: block;
+            text-align: center;
+            font-weight: 500;
+            font-size: clamp(12px, 2.5vw, 18px);
+        }
 }
