@@ -3,16 +3,19 @@
 .carousel{
     position: relative;
     display: flex;
-    width: 100%;
     height: 415px;
-    border-radius: 25px;
-    background-position: center;
-    background-size: cover;
     width: 95%;
+    border-radius: 25px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     margin: 43px auto;
     @media screen and (max-width: 650px){
         height: 200px;  
         margin: 20px auto;   
+    }
+    &_img {
+        width: 100%;
+        border-radius: 25px;
+        object-fit: cover;
     }
     &_arrow{
         position: absolute;
