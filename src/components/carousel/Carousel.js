@@ -30,7 +30,8 @@ export default function Carousel({ imageSlider }) {
   //  L'image affichée est définie comme fond de la div, avec l'indice de l'image.
   // Si le tableau contient plus d'une image, les flèches et l'indicateur de position/nombre total sont affichés.
   return (
-    <div className="carousel" style={{backgroundImage: `url(${imageSlider[currentIndex]})`}}>
+    <div className="carousel">
+      <img className='carousel_img' src={imageSlider[currentIndex]} alt=''/>
       {imageSlider.length > 1 && (
         <>
           <img
@@ -51,7 +52,7 @@ export default function Carousel({ imageSlider }) {
             {currentIndex + 1}/{imageSlider.length}
           </p>
         </>
-      )};
+      )}
     </div>
   );
-};
+}
