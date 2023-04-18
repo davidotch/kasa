@@ -6,8 +6,6 @@
     @include flex;
     border-radius: 25px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-    background-position: center;
-    background-size: cover;
     height: 223px;
     max-width: 95%;
     margin: 30px auto;
@@ -20,10 +18,10 @@
         position: relative;
         border-radius: 25px;
         height: 223px;
-        max-width: 100%;
         margin: 0 auto;
         mix-blend-mode: darken;
-        background-size: cover;
+        object-fit: cover;
+        width: 100%;
         @media screen and (max-width: 500px) {
         margin: 20px auto;
         border-radius: 10px;
