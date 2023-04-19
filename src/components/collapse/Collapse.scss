@@ -5,7 +5,7 @@
     max-width: 1023px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    margin: 10px auto;
+    margin: 20px auto;
     &_title{
         @include flex(row, space-between, center);
         background-color: $color-secondary;
