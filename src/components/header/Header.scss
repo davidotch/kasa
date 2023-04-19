@@ -5,15 +5,14 @@
     height: 68px;
     max-width: 95%;
     margin: 0 auto;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 500px) {
         height: 47px;
-        margin: 20px auto;
     }
     &_logo {
         height: 68%;
-    @media screen and (max-width: 768px)  {
-        height: 47px;
-    }
+    @media screen and (max-width: 500px)  {
+        height: 35px;
+        }
     }
     &_link {
         display: flex;
@@ -30,5 +29,4 @@
                 color: $color-secondary;
         }
     }
-    
 }
