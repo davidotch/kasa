@@ -6,14 +6,19 @@ import './About.scss';
 
 export default function About() {
     return (
-        <div className='about'>
-            <Banner picture={bannerAbout} />
+        <>
+            <Banner
+                class="banner banner--about"
+                image={bannerAbout}
+                alt="Une forêt"
+            />
+
             <div className='about_collapse'>
                 <Collapse title="Fiabilité" description={about.fiabilite} />
                 <Collapse title="Respect" description={about.respect} />
                 <Collapse title="Service" description={about.service} />
                 <Collapse title="Sécurité" description={about.securite} />
             </div>
-        </div>
+        </>
     )
 } 
