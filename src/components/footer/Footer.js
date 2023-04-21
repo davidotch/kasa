@@ -1,5 +1,6 @@
 import './Footer.scss'
 
+// Footer
 export function Footer() {
     return (
     <div className="footer">
