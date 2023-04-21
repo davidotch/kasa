@@ -1,6 +1,7 @@
 import './PageNotFound.scss'
 import { Link } from 'react-router-dom'
 
+// La fonction PageNotFound renvoie un élément contenant un texte d'erreur et un lien qui renvoie vers la page d'acceuil.
 export default function PageNotFound() {
     return (
         <div className='PageNotFound'>

@@ -65,6 +65,9 @@ export default function Accommodation() {
                 alt="host of this accomodation"
               />
             </div>
+            {/* une boucle génère un tableau de cinq élements, et pour chaque élément, une image d'étoile est générée.
+            Le nombre d'étoiles remplies dépend de la variable rating. 
+            Si l'index actuel dans la boucle est inférieur à rating, la source de l'image est redStar, sinon c'est greyStar. */}
             <div className="accomodation_content_host_stars">
               {[...Array(5)].map((_, index) => (
                 <img
