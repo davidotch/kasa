@@ -47,7 +47,7 @@ export default function Carousel({ imageSlider }) {
             onClick={previousImg}
           />
 
-          {/* le composant est exporté en tant que composant par défaut. */}
+          {/* On affiche une indication de la position actuelle de l'image affichée. */}
           <p className="slideCount">
             {currentIndex + 1}/{imageSlider.length}
           </p>
