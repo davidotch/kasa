@@ -2,6 +2,7 @@ import { useState } from "react";
 import arrow from '../../assets/arrow.png';
 import './Collapse.scss';
 
+// La fonction Collapse prend en paramètre 'title' et 'description' qui peuvent être masqués ou révélés en cliquant sur le titre.
 export default function Collapse({ title, description }) {
 
   const [open, setOpen] = useState(false);
@@ -17,7 +18,9 @@ export default function Collapse({ title, description }) {
             />
       </h3>
 
-      {/* Le contenu de la DIV est déterminé par la variable 'description'. Si 'description' est un tableau, chaque élément est converti en un paragraphe HTML et ajouté à la DIV. Sinon, 'description' est affiché tel quel dans la DIV. */}
+      {/* le contenu de la description est affiché ou masqué en fonction de l'état actuel.
+      Si la description est un tableau, chaque élément est affiché dans un paragraphe HTML, sinon la description est simplement affichée.
+      La fonction retourne une div qui contient le titre et la description. */}
       <div className={open ? 'collapse_description' : 'collapse_hidden_description'}>
         {Array.isArray(description) ?
           <ul>
