@@ -1,6 +1,6 @@
 import './Accomodation.scss';
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Carousel from "../../components/carousel/Carousel";
 import Collapse from "../../components/collapse/Collapse";
 import greyStar from "../../assets/grey_star.png";
@@ -12,6 +12,7 @@ export default function Accommodation() {
   const [currentAccommodation, setCurrentAccommodation] = useState({});
   const [imageSlider, setImageSlider] = useState([]);
 
+  const navigate = useNavigate();
 
   // On récupère l'ID à partir de l'URL.
   const { id: idAccommodation } = useParams();
@@ -25,13 +26,20 @@ export default function Accommodation() {
       .then((response) => response.json())
       .then((data) => {
         const accommodation = data.find((item) => item.id === idAccommodation);
+
+        if (!accommodation) {
+          navigate("/PageNotFound")
+        }
+
         setCurrentAccommodation(accommodation);
         setImageSlider(accommodation.pictures);
       })
       .catch((error) => console.error(error));
     }
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idAccommodation]);
+  
 
   // On extrait les variables du state local pour name, rating, description et equipments.
   // On extrait le nom et l'hôte et on le transforme en tableau a l'aide de méthode .split().
