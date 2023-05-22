@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/davidotch/kasa/static/css/main.756bdd09.css",
-    "main.js": "/davidotch/kasa/static/js/main.9b005787.js",
-    "static/media/gustavoAlvesUnsplash1.png": "/davidotch/kasa/static/media/gustavoAlvesUnsplash1.623a059b48b296a66c8d.png",
-    "static/media/headerImg.png": "/davidotch/kasa/static/media/headerImg.1f5e430ca865672dd154.png",
-    "index.html": "/davidotch/kasa/index.html",
-    "main.756bdd09.css.map": "/davidotch/kasa/static/css/main.756bdd09.css.map",
-    "main.9b005787.js.map": "/davidotch/kasa/static/js/main.9b005787.js.map"
+    "main.css": "/kasa/static/css/main.756bdd09.css",
+    "main.js": "/kasa/static/js/main.93a81dc8.js",
+    "static/media/gustavoAlvesUnsplash1.png": "/kasa/static/media/gustavoAlvesUnsplash1.623a059b48b296a66c8d.png",
+    "static/media/headerImg.png": "/kasa/static/media/headerImg.1f5e430ca865672dd154.png",
+    "index.html": "/kasa/index.html",
+    "main.756bdd09.css.map": "/kasa/static/css/main.756bdd09.css.map",
+    "main.93a81dc8.js.map": "/kasa/static/js/main.93a81dc8.js.map"
   },
   "entrypoints": [
     "static/css/main.756bdd09.css",
-    "static/js/main.9b005787.js"
+    "static/js/main.93a81dc8.js"
   ]
 }
