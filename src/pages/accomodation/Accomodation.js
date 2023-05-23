@@ -22,14 +22,19 @@ export default function Accommodation() {
 
     // La fonction getData est une fonction asynchrone qui utilise await pour attendre la réponse de la requête avant de continuer.
     const getData = async () => {
-        await fetch("/data.json")
+        await fetch('../data.json',{
+          headers : {
+            'Content-Type' : 'application/json',
+            'Accept' : 'application/json'
+          }
+        })
       .then((response) => response.json())
       .then((data) => {
         const accommodation = data.find((item) => item.id === idAccommodation);
 
-        if (!accommodation) {
-          navigate("/PageNotFound")
-        }
+        // if (!accommodation) {
+        //   navigate("/PageNotFound")
+        // }
 
         setCurrentAccommodation(accommodation);
         setImageSlider(accommodation.pictures);

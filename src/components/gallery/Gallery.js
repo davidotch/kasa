@@ -11,7 +11,12 @@ export default function Gallery() {
 
         // La fonction getData est une fonction asynchrone qui utilise await pour attendre la réponse de la requête avant de continuer.
         const getData = async () => {
-            await fetch('../data.json')
+            await fetch('data.json',{
+                headers : {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
             .then((res) => {
                 if (!res.ok) {
                     throw Error("Sorry an error occured...");
@@ -20,6 +25,7 @@ export default function Gallery() {
             })
             .then((data) => {
                 setData(data);
+                // console.log(data);
             })
             .catch((error) => {
                 console.log(error);
