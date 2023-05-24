@@ -32,9 +32,9 @@ export default function Accommodation() {
       .then((data) => {
         const accommodation = data.find((item) => item.id === idAccommodation);
 
-        // if (!accommodation) {
-        //   navigate("/PageNotFound")
-        // }
+        if (!accommodation) {
+          navigate("/PageNotFound")
+        }
 
         setCurrentAccommodation(accommodation);
         setImageSlider(accommodation.pictures);
